@@ -1,5 +1,5 @@
 # and-or-mlp-chainer
-OR演算子とAND演算子を多層パーセプトロンで学習する。
+OR演算子とAND演算子を多層パーセプトロンで学習する。  
 Chainerを使って実装。
 
 
