@@ -4,5 +4,5 @@ Chainerを使って実装。
 
 
 #Usage
- $ python train_or.py --gpu [0 or 1] --epoch [# of epoch]
+ $ python train_or.py --gpu [0 or 1] --epoch [# of epoch]  
  $ python train_and.py --gpu [0 or 1] --epoch [# of epoch]
