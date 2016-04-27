@@ -1,15 +1,10 @@
 # coding: utf-8
 import numpy as np
-from sklearn.cross_validation import train_test_split
-from collections import defaultdict
-import six
-import sys
 import chainer
 import chainer.links as L
 from chainer import optimizers, cuda, serializers
 import chainer.functions as F
 import argparse
-from gensim import corpora, matutils
 
 """
 Multilayer perceptron
@@ -51,7 +46,8 @@ if args.gpu > 0:
     cuda.check_cuda_available()
     cuda.get_device(args.gpu).use()
     model.to_gpu()
-    xp = np if args.gpu <= 0 else cuda.cupy #args.gpu <= 0: use cpu, otherwise: use gpu
+
+xp = np if args.gpu <= 0 else cuda.cupy #args.gpu <= 0: use cpu, otherwise: use gpu
 
 def forward(x, t):
     return F.sigmoid(model.l1(x))
